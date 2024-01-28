@@ -36,10 +36,17 @@ jobs:
         with:
           node-version: 20
           cache: 'npm'
-      - name: build
-        run: |
-          npm ci
-          npm run build
+      - name: Npm cache
+        uses: actions/cache@v4
+        id: fronten2-node
+        with:
+          path: node_modules
+          key: ${{ runner.os }}-frontend2-${{ hashFiles('package-lock.json') }}
+      - name: Npm install
+        if: steps.fronten2-node.outputs.cache-hit != 'true'
+        run: npm ci
+      - name: Build
+        run: npm run build
       - name: Setup Pages
         uses: actions/configure-pages@v4
       - name: Upload artifact
