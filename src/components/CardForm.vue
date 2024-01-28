@@ -87,28 +87,28 @@ function checkCardCvc(e) {
   <form class="input-form">
     <div class="input-wrapper">
       <label for="card-name">CARDHOLDER NAME</label>
-      <input type="text" placeholder="e.g. Jane Appleseed" class="card-name" name="card-name" v-model="cardName"
+      <input type="text" placeholder="e.g. Jane Appleseed" class="card-name" id="card-name" v-model="cardName"
         @input="checkCardName" required />
       <p class="error-info">{{ errorCardName }}</p>
     </div>
     <div class="input-wrapper">
       <label for="card-number">CARD NUMBER</label>
-      <input type="text" placeholder="e.g. 1234 5678 9123 0000" class="card-number" name="card-number"
-        v-model="cardNumber" @input="checkCardNumber" required />
+      <input type="text" placeholder="e.g. 1234 5678 9123 0000" class="card-number" id="card-number" v-model="cardNumber"
+        @input="checkCardNumber" required />
       <p class="error-info">{{ errorCardNumber }}</p>
     </div>
     <div class="input-footer-wrapper">
       <div class="input-exp-date">
         <label for="card-month">EXP. DATE (MM/YY)</label>
         <div class="card-month-year">
-          <input type="text" placeholder="MM" name="card-month" v-model="cardMonth" @input="checkCardMonth" required />
-          <input type="text" placeholder="YY" name="card-year" v-model="cardYear" @input="checkCardYear" required />
+          <input type="text" placeholder="MM" id="card-month" v-model="cardMonth" @input="checkCardMonth" required />
+          <input type="text" placeholder="YY" id="card-year" v-model="cardYear" @input="checkCardYear" required />
         </div>
         <p class="error-info">{{ errorCardDate }}</p>
       </div>
       <div class="input-cvc">
         <label for="card-cvc">CVC</label>
-        <input type="text" placeholder="e.g. 123" name="card-cvc" v-model="cardCvc" @input="checkCardCvc" required />
+        <input type="text" placeholder="e.g. 123" id="card-cvc" v-model="cardCvc" @input="checkCardCvc" required />
         <p class="error-info">{{ errorCardCvc }}</p>
       </div>
     </div>
