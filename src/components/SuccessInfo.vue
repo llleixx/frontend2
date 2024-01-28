@@ -1,5 +1,5 @@
 <script setup>
-import mybutton from './Button.vue'
+import MyButton from './MyButton.vue'
 const props = defineProps({
   change: {
     required: true,
@@ -15,7 +15,7 @@ const props = defineProps({
     </div>
     <p class="info-1">THANK YOU!</p>
     <p class="info-2">We've added your card details</p>
-    <mybutton :change="change">Continue</mybutton>
+    <MyButton :change="props.change">Continue</MyButton>
   </div>
 </template>
 

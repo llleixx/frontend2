@@ -1,6 +1,6 @@
 <script setup>
 import { ref } from 'vue'
-import mybutton from './Button.vue'
+import MyButton from './MyButton.vue'
 const props = defineProps({
   change: {
     required: true,
@@ -112,7 +112,7 @@ function checkCardCvc(e) {
         <p class="error-info">{{ errorCardCvc }}</p>
       </div>
     </div>
-    <mybutton :change="props.change">Confirm</mybutton>
+    <MyButton :change="props.change">Confirm</MyButton>
   </form>
 </template>
 
