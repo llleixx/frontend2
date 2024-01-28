@@ -43,6 +43,9 @@ $font-stack: 'Space Grotesk', sans-serif;
 main {
   font-family: $font-stack;
   font-size: 18px;
+  max-width: 450px;
+  margin: auto;
+  padding-bottom: 1px;
 }
 
 .banner {
@@ -121,25 +124,28 @@ main {
   margin: 110px 20px;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 1030px) {
   main {
     display: flex;
     flex-direction: row;
+    height: 100%;
     min-height: 100vh;
     align-items: center;
+    max-width: none;
   }
 
   .banner {
-    flex: 1;
-    background: url(./assets/bg-main-desktop.png) top left / contain no-repeat;
-    background-size: auto 100%;
-    min-height: 100vh;
+    flex: 1 1 600px;
+    background: url(./assets/bg-main-desktop.png) top left no-repeat;
+    background-size: 60% 100%;
+    height: 100%;
+    align-self: flex-start;
   }
 
   .main-content {
-    flex: 1;
-    padding-left: 200px;
-    padding-right: 100px;
+    flex: 1 1 600px;
+    padding-left: 120px;
+    padding-right: 120px;
   }
 
   .card {
